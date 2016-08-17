@@ -1,0 +1,9 @@
+<li id="entry-<%= entry.id %>">
+  <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
+  <span class="user"><%= link_to entry.user.name, entry.user %></span>
+  <span class="content"><%= entry.title %></span>
+  <span class="content"><%= entry.body %></span>
+  <span class="timestamp">
+    Posted <%= select_date(entry.created_at) %> ago.
+  </span>
+</li>
